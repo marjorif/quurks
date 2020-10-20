@@ -8,19 +8,20 @@
 
 User.destroy_all
 puts "users destroyed"
+Trait.destroy_all
 
-user = User.create(first_name: "john", last_name: "smith", email: "john@dot.com", password: "123456")
-user1 = User.create(first_name: "ana", last_name: "smith", email: "ana@dot.com", password: "123456")
-user2 = User.create(first_name: "marjorie", last_name: "smith", email: "marjorie@dot.com", password: "123456")
-user3 = User.create(first_name: "claudine", last_name: "smith", email: "claudine@dot.com", password: "123456")
-user4 = User.create(first_name: "alicia", last_name: "smith", email: "alicia@dot.com", password: "123456")
+user = User.create!(first_name: "john", last_name: "smith", email: "john@dot.com", password: "123456")
+user1 = User.create!(first_name: "ana", last_name: "smith", email: "ana@dot.com", password: "123456")
+user2 = User.create!(first_name: "marjorie", last_name: "smith", email: "marjorie@dot.com", password: "123456")
+user3 = User.create!(first_name: "claudine", last_name: "smith", email: "claudine@dot.com", password: "123456")
+user4 = User.create!(first_name: "alicia", last_name: "smith", email: "alicia@dot.com", password: "123456")
 puts "users created"
 
 
-trait = Trait.create(name: "competence", description: "lorem ipsum", price_hour: 10)
-trait1 = Trait.create(name: "warmth", description: "lorem ipsum", price_hour: 15)
-trait2 = Trait.create(name: "outgoing", description: "lorem ipsum", price_hour: 20)
-trait3 = Trait.create(name: "honest", description: "lorem ipsum", price_hour: 25)
-trait4 = Trait.create(name: "trustworthy", description: "lorem ipsum", price_hour: 30)
+trait = Trait.create!(name: "competence", description: "lorem ipsum", price_hour: 10, user: user)
+trait1 = Trait.create!(name: "warmth", description: "lorem ipsum", price_hour: 15, user: user1)
+trait2 = Trait.create!(name: "outgoing", description: "lorem ipsum", price_hour: 20, user: user2)
+trait3 = Trait.create!(name: "honest", description: "lorem ipsum", price_hour: 25, user: user3)
+trait4 = Trait.create!(name: "trustworthy", description: "lorem ipsum", price_hour: 30, user: user4)
 
 puts "traits created"
