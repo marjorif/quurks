@@ -1,3 +1,4 @@
+<div class="container col-4">
 <h1>Trait</h1>
 
 <%= @trait.name %>
@@ -5,3 +6,9 @@
 <%= @trait.price_hour %>
 
 <!-- link to edit , delete, back to traits list -->
+<div class="mt-5">
+  <%= link_to "back", traits_path, class:'m-3' %>
+  <%= link_to "edit", edit_trait_path(@trait), class:'m-3' %>
+  <%= link_to "delete", trait_path(@trait), method: :delete, data: {confirm: "are you sure?"}%>
+</div>
+</div>

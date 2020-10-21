@@ -1,8 +1,11 @@
-<h1>All traits</h1>
-
-
-<% @traits.each do |trait| %>
-  <p><%= trait.name %></p>
-<% end %>
-
-
+<div class="container col-4 mt-5">
+  <h1>All traits</h1>
+  <ul class="list-unstyled">
+  <% @traits.each do |trait| %>
+    <li><%=link_to trait.name, trait_path(trait) %></li>
+  <% end %>
+  </ul>
+  <div class="btn">
+    <%= link_to "add a new trait", new_trait_path %>
+  </div>
+</div>
