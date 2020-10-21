@@ -7,14 +7,26 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <!-- bootstrap -->
-    <!-- fontawesome -->
+
+    <!-- added font-awesome, bootstrap, google fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
 
-    <!-- add navbar -->
+    <!-- added navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to 'Quurks', root_path, class: 'navbar-brand' %>
+        <!-- used flex to put Quurks and Add Personality button on opposite sides of webpage -->
+        <div class="ml-auto flex">
+          <%= link_to 'Add Personality Trait', new_trait_path, class: 'btn btn-outline-primary my-2 my-sm-0 ml-2' %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
