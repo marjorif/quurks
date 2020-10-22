@@ -1,8 +1,10 @@
 class TraitsController < ApplicationController
-  before_action :find_trait, only: [:show, :edit, :create, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show ]
+  before_action :find_trait, only: [:show, :edit, :destroy]
 
   def index
     @traits = Trait.all
+
   end
 
   def new
@@ -11,6 +13,7 @@ class TraitsController < ApplicationController
 
   def create
     @trait = Trait.new(trait_params)
+    @trait.user = current_user
       if @trait.save
         redirect_to trait_path(@trait)
       else

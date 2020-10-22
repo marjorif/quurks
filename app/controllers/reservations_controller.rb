@@ -6,6 +6,7 @@ before_action :find_trait, only: [:show,:new, :edit, :destroy]
     # show all the reservations to all the user?
     # show all the reservations for a specific user?
     @reservations = Reservation.all
+
   end
 
   def show
@@ -18,14 +19,17 @@ before_action :find_trait, only: [:show,:new, :edit, :destroy]
   end
 
   def create
+    # raise
+    @trait = Trait.find(params[:trait_id])
     @reservation = Reservation.new(reservation_params)
     @reservation.trait = @trait
+    # @reservation.user = current_user
 
     if @reservation.save
       redirect_to reservation_path(@reservation), notice: 'Reservation successful' # or uccess page?
     else
-      @trait = Trait.find(params[:trait_id])
-      redirect_to trait_path(@trait)
+      # @trait = Trait.find(params[:trait_id])
+      render "traits/show"
     end
   end
 

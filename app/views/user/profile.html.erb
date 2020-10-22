@@ -1,0 +1,7 @@
+<h1> HEllO User</h1>
+
+<%= current_user.first_name %>
+<%= current_user.last_name %>
+<%= current_user.reservations.each do |reservation| %>
+ <p><%=reservation   %><p>
+<% end %>>
