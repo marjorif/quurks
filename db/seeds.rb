@@ -25,3 +25,7 @@ trait3 = Trait.create!(name: "honest", description: "lorem ipsum", price_hour: 2
 trait4 = Trait.create!(name: "trustworthy", description: "lorem ipsum", price_hour: 30, user: user4)
 
 puts "traits created"
+
+puts "creating reservation"
+
+# reservation = Reservation.create!(user: user, trait: trait)

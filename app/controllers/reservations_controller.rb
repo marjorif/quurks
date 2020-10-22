@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
-before_action :find_reservation, only: [:show, :edit, :create, :destroy]
-before_action :find_trait, only: [:show,:new, :edit, :create, :destroy]
+before_action :find_reservation, only: [:show, :edit, :destroy]
+before_action :find_trait, only: [:show,:new, :edit, :destroy]
 
   def index
     # show all the reservations to all the user?
@@ -18,13 +18,13 @@ before_action :find_trait, only: [:show,:new, :edit, :create, :destroy]
   end
 
   def create
-    @trait = Trait.find(params[:trait_id])
     @reservation = Reservation.new(reservation_params)
     @reservation.trait = @trait
 
     if @reservation.save
       redirect_to reservation_path(@reservation), notice: 'Reservation successful' # or uccess page?
     else
+      @trait = Trait.find(params[:trait_id])
       redirect_to trait_path(@trait)
     end
   end
@@ -34,7 +34,6 @@ before_action :find_trait, only: [:show,:new, :edit, :create, :destroy]
   end
 
   def destroy
-    @trait = Trait.find(params[:trait_id])
     @reservation.destroy
     redirect_to trait_path(@trait), notice: 'Reservation deleted.'
   end
