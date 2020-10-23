@@ -2,4 +2,6 @@
   <h1>Your reservation is confirmed!!</h1>
   <h5>Total   ???
   reservation.end_date - reservation_start.date = days / days * reservation.price?</h5>
+  <%= link_to "back to traits", traits_path %>
+  <%= link_to "Delete Reservation", reservation_path(@reservation), method: :delete, data: {confirm: "are you sure?"}%>
 </div>
