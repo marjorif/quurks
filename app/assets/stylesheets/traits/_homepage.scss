@@ -4,6 +4,7 @@
   object-fit: cover;
   border-radius: 15px;
   margin-left: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 .container-image {
@@ -32,28 +33,35 @@
   }
 }
 
-  .book-trait {
-    background-color: #F9CF59;
-    width: 308px;
-    height: 55px;
+.book-trait {
+  background-color: #F9CF59;
+  width: 308px;
+  height: 55px;
 
-    a {
-      color: white !important;
-    }
+  a {
+    color: white !important;
   }
+}
 
-  .book-trait-button {
-    text-align: right;
-  }
+.book-trait-button {
+  text-align: right;
+}
 
-  .container {
-    padding-top: 29px;
+.container {
+  padding-top: 29px;
 
-    .h1 {
+  h1 {
     font-family: Raleway;
     font-size: 40px;
+    font-weight: bold;
+
+    span {
+      color: #81AA8A;
+      font-size: 20px;
+      font-weight: bold;
     }
   }
+}
 
 
 
