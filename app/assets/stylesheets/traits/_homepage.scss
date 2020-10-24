@@ -1,0 +1,39 @@
+.traits-image img {
+  height: 300px;
+  width: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-left: 15px;
+
+}
+
+.flex-container-trait {
+  display: flex;
+  justify-content: center;
+  padding-top: 39px;
+}
+
+.container-trait-description {
+  height: 300px;
+  width: 600px;
+  font-style: Raleway;
+  margin-right: 15px;
+}
+
+  .book-trait {
+    background-color: #F9CF59;
+    width: 308px;
+    height: 55px;
+
+    a {
+      color: white !important;
+    }
+  }
+
+  .book-trait-button {
+    text-align: right;
+    padding-top: 110px;
+  }
+
+
+
