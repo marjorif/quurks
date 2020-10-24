@@ -1,0 +1,67 @@
+.traits-image img {
+  height: 300px;
+  width: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-left: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.container-image {
+  height: 400px;
+  width: 650px;
+  padding-top: 50px;
+}
+
+.flex-container-trait {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 39px;
+}
+
+.container-trait-description {
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-style: Raleway;
+
+  p {
+    font-family: Raleway;
+    font-weight: thin;
+    font-size: 24px;
+  }
+}
+
+.book-trait {
+  background-color: #F9CF59;
+  width: 308px;
+  height: 55px;
+
+  a {
+    color: white !important;
+  }
+}
+
+.book-trait-button {
+  text-align: right;
+}
+
+.container {
+  padding-top: 29px;
+
+  h1 {
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: bold;
+
+    span {
+      color: #81AA8A;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+

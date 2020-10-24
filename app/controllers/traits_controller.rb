@@ -21,8 +21,12 @@ class TraitsController < ApplicationController
     end
   end
 
-  def show;end
-  def edit;end
+  def show
+    @user = @trait.user
+  end
+
+  def edit
+  end
 
   def update
     @trait.update(trait_params)
