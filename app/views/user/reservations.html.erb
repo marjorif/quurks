@@ -1,0 +1,18 @@
+
+<div class="user">
+  <h1><%=current_user.first_name.capitalize%>, your reservations:</h1>
+  <div class="user_info">
+    <% current_user.reservations.each do |reservation| %>
+     <p><%= reservation.start_date   %><p>
+     <p><%= reservation.end_date   %><p>
+    <% end %>
+    <%= link_to "back to traits", traits_path %>
+  </div>
+</div>
+<div class="reservations_list">
+  <div class="rec_yellow"></div>
+  <div class="rec_pink"></div>
+  <div class="rec_green"></div>
+  <div class="circle_black"></div>
+  <div class="rec_black"></div>
+</div>

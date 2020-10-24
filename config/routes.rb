@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :user, only: [] do
     collection do
       get :profile
+      get :reservations
     end
   end
 end
