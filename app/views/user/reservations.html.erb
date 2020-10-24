@@ -1,4 +1,3 @@
-
 <div class="user">
   <h1><%=current_user.first_name.capitalize%>, your reservations:</h1>
   <div class="user_info">
@@ -6,9 +5,14 @@
      <p><%= reservation.start_date   %><p>
      <p><%= reservation.end_date   %><p>
     <% end %>
-    <%= link_to "back to traits", traits_path %>
+    <div class="user_reservations_btn">
+      <p>
+        <%= link_to "Back to traits", traits_path %>
+      </p>
+    </div>
   </div>
 </div>
+
 <div class="reservations_list">
   <div class="rec_yellow"></div>
   <div class="rec_pink"></div>

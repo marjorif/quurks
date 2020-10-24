@@ -1,3 +1,39 @@
+body{
+  margin: 0;
+  height: 100%;
+  margin:auto;
+  position:relative;
+}
+
+.user{
+  position:absolute;
+  width:550px;
+  top:150px;
+  left:200px;
+  text-align:center;
+}
+h1{
+  padding-bottom:50px
+}
+.user_info {
+  display: flex;
+  flex-direction: column;
+}
+.user_info p {
+  font-size:24px;
+  margin-bottom: 40px;
+}
+.user_reservations_btn{
+  position: absolute;
+  width: 355px;
+  height: 49px;
+  left: 307px;
+  top: 515px;
+  background: #F9CF59;
+  mix-blend-mode: normal;
+  border-radius: 5px;
+}
+
 .user_reservations_btn p{
   text-decoration: none;
   text-align: center;
@@ -15,3 +51,64 @@
   color: white;
 
 }
+
+.rec_yellow{
+  position: absolute;
+  width: 493.73px;
+  height: 175.62px;
+  left: 1179.47px;
+  top: 185.41px;
+  background:  #FBCC49;;
+  mix-blend-mode: normal;
+  border-radius: 150px;
+  transform: matrix(0.81, 0.6, -0.58, 0.81, 0, 0);
+}
+
+.rec_pink{
+  position: absolute;
+  width: 493.73px;
+  height: 175.62px;
+  left: 1079.47px;
+  top: 314.41px;
+  background: #F9B9D3;
+  mix-blend-mode: normal;
+  border-radius: 150px;
+  transform: matrix(0.81, 0.6, -0.58, 0.81, 0, 0);
+}
+
+.rec_green{
+  position: absolute;
+  width: 899.73px;
+  height: 175.62px;
+  left: 773.47px;
+  top: 440.41px;
+  background: #5C9468;
+  mix-blend-mode: normal;
+  border-radius: 150px;
+  transform: matrix(0.81, 0.6, -0.58, 0.81, 0, 0);
+}
+
+.circle_black{
+  position: absolute;
+  width: 185.62px;
+  height: 185.62px;
+  left: 854.16px;
+  top: 469.99px;
+  background: #363334;
+  mix-blend-mode: normal;
+  border-radius: 150px;
+  transform: matrix(0.81, 0.6, -0.58, 0.81, 0, 0);
+}
+
+.rec_black{
+  position: absolute;
+  width: 385.62px;
+  height: 185.62px;
+  left: 1125.27px;
+  top: 729px;
+  background: #363334;
+  mix-blend-mode: normal;
+  border-radius: 150px;
+  transform: matrix(0.81, 0.6, -0.58, 0.81, 0, 0);
+}
+
