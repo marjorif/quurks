@@ -1,1 +1,50 @@
 // Specific CSS for your home-page
+#home-image {
+	position: relative;
+}
+
+#title {
+	font-size: 144px;
+	position: absolute;
+	top: 250px;
+  	left: 134px;
+}
+
+h1 {
+	font-family: $title-font;
+}
+
+h2 {
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+
+.card-img-top-3 {
+	height: 233px;
+	background-color: #F7BDD5;
+}
+
+.card-img-top-4 {
+	height: 173px;
+	background-color: #6A9C75;
+}
+
+.container-fluid {
+	margin-top: 42px;
+}
+
+.card-body-3 {
+	height: 40px;
+}
+
+.card-body-4 {
+	height: 40px;
+}
+
+.card-title {
+	padding-left: 10px;
+	padding-top: 7px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
