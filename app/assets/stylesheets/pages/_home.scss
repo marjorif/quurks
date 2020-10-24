@@ -7,7 +7,7 @@
 	font-size: 144px;
 	position: absolute;
 	top: 250px;
-  	left: 134px;
+  left: 134px;
 }
 
 h1 {
@@ -20,14 +20,19 @@ h2 {
 	font-weight: bold;
 }
 
+.card {
+	border-radius: 11px !important;
+	border: solid;
+}
+
 .card-img-top-3 {
 	height: 233px;
-	background-color: #F7BDD5;
+	background-color: $pink;
 }
 
 .card-img-top-4 {
 	height: 173px;
-	background-color: #6A9C75;
+	background-color: $green;
 }
 
 .container-fluid {
@@ -47,4 +52,13 @@ h2 {
 	padding-top: 7px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
+}
+
+
+.card-link {
+  color: $black;
+}
+
+.card-link:hover {
+	color: $pink;
 }
