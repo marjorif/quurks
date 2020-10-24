@@ -27,7 +27,7 @@ before_action :find_reservation, only: [:show, :edit, :destroy]
     @reservation.user = current_user
 
     if @reservation.save
-      redirect_to trait_reservations_path(@trait, @reservation)
+      redirect_to trait_reservation_path(@trait, @reservation)
     else
       # @trait = Trait.find(params[:trait_id])
       render :new

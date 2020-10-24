@@ -1,12 +1,19 @@
-<div class="container col-4 mt-5">
-  <h1> HEllO <%=current_user.first_name.capitalize  %></h1>
+<div class="user">
+  <h1> Hello <%=current_user.first_name.capitalize  %></h1>
+  <div class="user_info">
+    <p>First Name: <br>   <%= current_user.first_name.capitalize %></p>
 
-  <p>First Name: <%= current_user.first_name.capitalize %></p>
-  <p>Last Name: <%= current_user.last_name.capitalize %></p>
-    <h3 class="mt-5">Your reservations</h3>
-  <% current_user.reservations.each do |reservation| %>
-   <p><%= reservation.start_date   %><p>
-   <p><%= reservation.end_date   %><p>
-  <% end %>
-  <%= link_to "back to traits", traits_path %>
+    <p>Last Name:  <br>  <%= current_user.last_name.capitalize %></p>
+  </div>
 </div>
+<div class="user_reservations_btn">
+  <p>
+    <%= link_to "Check my Reservations",  reservations_user_index_path %>
+  </p>
+</div>
+<div class="rec_yellow"></div>
+<div class="rec_pink"></div>
+<div class="rec_green"></div>
+<div class="circle_black"></div>
+<div class="rec_black"></div>
+
