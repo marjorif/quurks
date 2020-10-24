@@ -1,15 +1,27 @@
-<div class="container col-4 mt-5">
-<h1>Trait</h1>
 
+<div class="container">
+  <h1><%= @trait.name %> <span>by <%= @user.first_name %></span></h1>
+  <div class="flex-container-trait">
 
-<%= @trait.name %>
-<p class="mb-3"><%= @trait.description %></p>
-<p><%= @trait.price_hour %>€ </p>
-<%= link_to "Book Trait", new_trait_reservation_path(@trait), class:'m-3' %>
-<!-- link to edit , delete, back to traits list -->
-<div class="mt-5">
-  <%= link_to "back", traits_path, class:'m-3' %>
-  <%= link_to "edit", edit_trait_path(@trait), class:'m-3' %>
-  <%= link_to "delete", trait_path(@trait), method: :delete, data: {confirm: "are you sure?"}%>
+    <div class="container-trait-description">
+      <div>
+        <p><%= @trait.description %></p>
+        <p><%= @trait.price_hour %>€ </p>
+      </div>
+
+      <div class="book-trait-button">
+        <button type="button" class="btn book-trait btn-lg">
+          <%= link_to "Book this trait", new_trait_reservation_path(@trait) %>
+        </button>
+      </div>
+    <!-- link to edit , delete, back to traits list -->
+    </div>
+
+      <div class="traits-image">
+        <%= image_tag "traitsimage.png" %>
+      </div>
+
+  </div>
+
 </div>
-</div>
+
