@@ -5,10 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Trait.destroy_all
 User.destroy_all
 puts "users destroyed"
-Trait.destroy_all
 
 user = User.create!(first_name: "John", last_name: "Smith", email: "john@dot.com", password: "123456")
 user1 = User.create!(first_name: "Ana", last_name: "Smith", email: "ana@dot.com", password: "123456")

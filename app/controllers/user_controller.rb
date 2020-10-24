@@ -3,4 +3,7 @@ class UserController < ApplicationController
   def profile
 
   end
+  def reservations
+
+  end
 end
