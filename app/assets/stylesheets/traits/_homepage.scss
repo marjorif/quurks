@@ -1,6 +1,6 @@
 .traits-image img {
-  height: 300px;
-  width: 600px;
+  height: 411px;
+  width: 615px;
   object-fit: cover;
   border-radius: 15px;
   margin-left: 15px;
@@ -16,7 +16,6 @@
 .flex-container-trait {
   display: flex;
   justify-content: space-between;
-  padding-top: 39px;
 }
 
 .container-trait-description {
@@ -24,12 +23,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-style: Raleway;
 
   p {
-    font-family: Raleway;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
     font-size: 24px;
-    font-weight: italic;
   }
 }
 
@@ -51,7 +49,7 @@
   padding-top: 29px;
 
   h1 {
-    font-family: Raleway;
+    font-family: $title-font;
     font-size: 40px;
     font-weight: bold;
 
@@ -61,6 +59,17 @@
       font-weight: bold;
       font-family: Raleway;
     }
+  }
+}
+
+.container-fluid {
+  padding-top: 42px;
+  padding-bottom: 65px;
+
+  h2 {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   }
 }
 
