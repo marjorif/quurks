@@ -23,6 +23,7 @@ class TraitsController < ApplicationController
 
   def show
     @user = @trait.user
+    @traits = Trait.all
   end
 
   def edit

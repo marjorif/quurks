@@ -6,7 +6,6 @@
     <div class="container-trait-description">
       <div>
         <p><%= @trait.description %></p>
-        <p><%= @trait.price_hour %>€ </p>
       </div>
 
       <div class="book-trait-button">
@@ -23,5 +22,22 @@
 
   </div>
 
+  <div class="container-fluid">
+    <h2>Check other traits</h2>
+    <div class="row">
+      <% @traits.sample(4).each do |trait| %>
+        <div class="col col-md-3">
+          <div class="card">
+            <img class="card-img-top-4">
+            <div class="card-body-4">
+              <h5 class="card-title"><%= link_to trait.name, trait_path(trait), class: 'card-link' %></h5>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
 </div>
+
 
