@@ -8,8 +8,11 @@
       <div class="col col-md-3">
         <div class="card">
           <img class="card-img-top-4">
-          <div class="card-body-4">
-            <h5 class="card-title"><%= link_to trait.name, trait_path(trait), class: 'card-link' %></h5>
+          <div class="car-infos">
+            <div class="card-body-4">
+              <p class="card-title"><%= link_to trait.name, trait_path(trait), class: 'card-link' %></p>
+            </div>
+            <p class="card-pricing"><%= trait.price_hour %></p>
           </div>
         </div>
       </div> 
@@ -17,6 +20,24 @@
   </div>
 </div>
 
+<div class="container-fluid">
+  <h2>All traits</h2>
+  <div class="row">
+    <% @traits.each do |trait| %>
+      <div class="col col-md-3">
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= link_to trait.name, trait_path(trait), class: 'card-link' %></h2>
+            </div>
+            <h2 class="card-trip-pricing"><%= trait.price_hour %></h2>
+          </div>
+        </div>
+      </div> 
+    <% end %>
+  </div>
+</div>
 
 <%= link_to "Log Out",  destroy_user_session_path, method: :delete %>
 </div>
