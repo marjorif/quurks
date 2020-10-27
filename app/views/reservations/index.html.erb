@@ -2,7 +2,6 @@
   <h1>Your reservations</h1>
   <% @reservations.each do |reservation| %>
     <p>You booked the Trait:  <%= reservation.trait.name %></p>
-
     <p><%= reservation.start_date %></p>
     <p><%= reservation.end_date %></p>
   <% end %>

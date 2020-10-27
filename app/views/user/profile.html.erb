@@ -1,14 +1,14 @@
 <div class="user">
   <h1> Hello <%=current_user.first_name.capitalize  %></h1>
   <div class="user_info">
-    <p>First Name: <br>   <%= current_user.first_name.capitalize %></p>
-
-    <p>Last Name:  <br>  <%= current_user.last_name.capitalize %></p>
+    <p>First Name:<span> <%= current_user.first_name.capitalize %></p>
+    <p>Last Name:<span> <%= current_user.last_name.capitalize %></p>
+    <p>Email: <span> <%= current_user.email %></p>
   </div>
 </div>
 <div class="user_reservations_btn">
   <p>
-    <%= link_to "Check my Reservations",  reservations_user_index_path %>
+    <%= link_to "Back to traits",  traits_path %>
   </p>
 </div>
 <div class="rec_yellow"></div>

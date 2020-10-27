@@ -2,12 +2,17 @@
   <h1><%=current_user.first_name.capitalize%>, your reservations:</h1>
   <div class="user_info">
     <% current_user.reservations.each do |reservation| %>
-     <p><%= reservation.start_date   %><p>
-     <p><%= reservation.end_date   %><p>
+     <p>Booked Trait: <%= reservation.trait.name.capitalize  %><p>
+     <p>Start Date: <%= reservation.start_date  %><p>
+     <p>End Date: <%= reservation.end_date  %><p>
+      <div class="user_action">
+      <%= link_to "Edit",  edit_trait_reservation_path(reservation.trait, reservation) %>
+      <%= link_to "Delete", reservation_path(reservation), method: :delete, data: {confirm: "are you sure?"}%>
+    </div>
     <% end %>
     <div class="user_reservations_btn">
       <p>
-        <%= link_to "Back to traits", traits_path %>
+        <%= link_to "Back", profile_user_index_path %>
       </p>
     </div>
   </div>
