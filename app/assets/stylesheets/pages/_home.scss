@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+
+// --- HOME PAGE ---
+.home {
+	background-color: $offwhite;
+}
 #home-image {
 	position: relative;
 }
@@ -10,15 +15,27 @@
   left: 134px;
 }
 
-h1 {
-	font-family: $title-font;
-}
-
-h2 {
+.btn.btn-all-traits {
+	background-color: $yellow;
+	border-radius: 11px;
 	font-size: 24px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
+	color: $black;
+	position: absolute;
+	top: 440px;
+  left: 257px;
+
+	a{
+		color: $white;
+		text-decoration: none;
+	}
 }
+.btn.btn-all-traits:hover {
+	background-color: $yellow-hover;
+}
+
+// --- SHOW ALL TRAITS ---
 
 .card {
 	border-radius: 11px !important;
@@ -53,7 +70,6 @@ h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
-
 
 .card-link {
   color: $black;
