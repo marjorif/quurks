@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
 # before_action :find_trait, only: [:show, :new, :create, :edit, :destroy]
 
-before_action :find_reservation, only: [:show, :edit, :destroy]
+before_action :find_reservation, only: [:show, :edit, :update, :destroy]
 
   def index
     # show all the reservations to all the user?
@@ -34,11 +34,14 @@ before_action :find_reservation, only: [:show, :edit, :destroy]
     end
   end
 
-  def edit;end
+  def edit
+    @trait = Trait.find(params[:trait_id])
+  end
 
   def update
-      if @reservation.updat(reservation_params)
-      redirect_to reservations_path
+    @trait = Trait.find(params[:trait_id])
+      if @reservation.update(reservation_params)
+      redirect_to  trait_reservation_path(@trait, @reservation)
     else
       render :new
     end
@@ -46,7 +49,7 @@ before_action :find_reservation, only: [:show, :edit, :destroy]
 
   def destroy
     @reservation.destroy
-    redirect_to trait_reservations_path(@reservation)
+    redirect_to reservations_user_index_path
   end
 
 
