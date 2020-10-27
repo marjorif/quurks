@@ -10,22 +10,32 @@
 
     <!-- added font-awesome, bootstrap, google fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
-
-    <!-- added navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <%= link_to 'Quurks', root_path, class: 'navbar-brand' %>
-        <!-- used flex to put Quurks and Add Personality button on opposite sides of webpage -->
-        <div class="ml-auto flex">
-          <%= link_to 'Add Personality Trait', new_trait_path, class: 'btn btn-outline-primary my-2 my-sm-0 ml-2' %>
+    <nav class="navbar navbar-expand-lg">
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#">About us</a> -->
+            <%= link_to "About Us", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#">Log in</a> -->
+            <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link sign-up" href="#">Sign up</a> -->
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link sign-up"  %>
+          </li>
+        </ul>
       </div>
     </nav>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
