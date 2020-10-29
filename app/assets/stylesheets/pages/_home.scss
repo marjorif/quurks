@@ -60,12 +60,6 @@
 	background-color: $green;
 }
 
-.card-trait h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
 .card-trait p {
   font-size: 12px;
   opacity: .7;
@@ -78,6 +72,11 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+}
+
+.card-trait-infos-name {
+	font-size: 16px;
+  font-weight: bold;
 }
 
 .card-trait-infos .card-trait-user {

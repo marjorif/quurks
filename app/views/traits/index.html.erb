@@ -9,9 +9,9 @@
               <img class="card-img-top-4">
               <div class="card-trait-infos">
                 <div>
-                  <h2><%= link_to trait.name, trait_path(trait), class: 'card-link' %></h2>
+                  <h2 class="card-trait-infos-name"><%= link_to trait.name, trait_path(trait), class: 'card-link' %></h2>
                 </div>
-                <h2 class="card-trait-pricing"><%= trait.price_hour %>€</h2>
+                <h2 class="card-trait-infos-pricing"><%= trait.price_hour %>€</h2>
               </div>
             </div>
           </div> 
@@ -19,32 +19,3 @@
       </div>
     </div>
 <div class="container">
-
-
-<div class="container-fluid">
-  <h2>All traits</h2>
-  <div class="row">
-    <% @traits.each do |trait| %>
-      <div class="col col-md-3">
-        <div class="card">
-          <img class="card-img-top-4">
-          <div class="card-body-4">
-            <h5 class="card-title"><%= link_to trait.name, trait_path(trait), class: 'card-link' %></h5>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<!--<%= link_to "Log Out",  destroy_user_session_path, method: :delete %>
-</div>  -->
-
-<!-- <ul class="list-unstyled"> -->
-<!-- <% @traits.each do |trait| %> -->
-<!-- <li><%=link_to trait.name, trait_path(trait) %></li> -->
-<!-- <% end %> -->
-<!--</ul> -->
-<!--<div class="btn"> -->
-<!--     <%= link_to "add a new trait", new_trait_path %> -->
-<!--  </div> -->
