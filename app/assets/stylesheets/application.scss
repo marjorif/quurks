@@ -10,7 +10,15 @@
 
 // Your CSS partials
 @import "components/index";
+
+// Pages
+@import "pages/home";
 @import "pages/index";
+
+// Registration
+@import "registrations/_sign_up";
+
+// Traits
 @import "traits/index";
 @import "traits/show";
 
