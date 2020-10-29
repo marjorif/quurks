@@ -1,3 +1,7 @@
+cloudinary:
+  service: Cloudinary
+  # using service Cloudinary and linking to Cloudinary gem I installed
+
 test:
   service: Disk
   root: <%= Rails.root.join("tmp/storage") %>
