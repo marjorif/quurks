@@ -1,19 +1,23 @@
 <div class="user">
   <h1> Hello <%=current_user.first_name.capitalize  %></h1>
   <div class="user_info">
-    <p>First Name:<span> <%= current_user.first_name.capitalize %></p>
-    <p>Last Name:<span> <%= current_user.last_name.capitalize %></p>
-    <p>Email: <span> <%= current_user.email %></p>
+    <p>First Name</p><div class="info"><%= current_user.first_name.capitalize %></div>
+    <p>Last Name</p><div class="info"><%= current_user.last_name.capitalize %></div>
+    <p>Email</p><div class="info"><%= current_user.email %></div>
+    <div class="yellow_btn">
+      <p>
+        <%= link_to "Back",  traits_path %>
+      </p>
+    </div>
+    <div class="pink_btn">
+      <p>
+        <%= link_to "Edit Profile",  edit_user_registration_path %>
+      </p>
+    </div>
   </div>
+  <div class="rec_yellow"></div>
+  <div class="rec_pink"></div>
+  <div class="rec_green"></div>
+  <div class="circle_black"></div>
+  <div class="rec_black"></div>
 </div>
-<div class="user_reservations_btn">
-  <p>
-    <%= link_to "Back to traits",  traits_path %>
-  </p>
-</div>
-<div class="rec_yellow"></div>
-<div class="rec_pink"></div>
-<div class="rec_green"></div>
-<div class="circle_black"></div>
-<div class="rec_black"></div>
-
