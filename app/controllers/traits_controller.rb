@@ -1,6 +1,6 @@
 class TraitsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show ]
-  before_action :find_trait, only: [:show, :edit, :destroy]
+  before_action :find_trait, only: [:show, :edit,:update, :destroy]
 
   def index
     @traits = Trait.all
@@ -23,6 +23,7 @@ class TraitsController < ApplicationController
 
   def show
     @user = @trait.user
+    @traits = Trait.all
   end
 
   def edit
@@ -35,7 +36,7 @@ class TraitsController < ApplicationController
 
   def destroy
     @trait.destroy
-    redirect_to traits_path
+    redirect_to traits_user_index_path
   end
 
   private

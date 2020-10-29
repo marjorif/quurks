@@ -1,0 +1,15 @@
+<div class="user">
+  <h1><%=current_user.first_name.capitalize%>, your listed traits:</h1>
+  <div class="user_info">
+    <% current_user.traits.each do |trait| %>
+     <p>Trait Name: <%= trait.name.capitalize %><p>
+     <p>Description: <%= trait.description %><p>
+     <p>Price p/hour: <%= trait.price_hour %>€<p>
+    <div class="user_action">
+      <%= link_to "Back", profile_user_index_path %>
+      <%= link_to "Edit",  edit_trait_path(trait) %>
+      <%= link_to "Delete", trait_path(trait), method: :delete, data: {confirm: "are you sure?"}%>
+    </div>
+    <% end %>
+  </div>
+</div>
