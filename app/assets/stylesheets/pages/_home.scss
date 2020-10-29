@@ -37,38 +37,54 @@
 
 // --- SHOW ALL TRAITS ---
 
-.card {
-	border-radius: 11px !important;
-	border: solid;
+.traits-container {
+	margin-bottom: 40px;
 }
 
-.card-img-top-3 {
-	height: 233px;
-	background-color: $pink;
+.traits-container h2 {
+	color: $black;
 }
 
-.card-img-top-4 {
-	height: 173px;
+.card-trait {
+  overflow: hidden;
+  background: white;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.137);
+	margin-top: 20px;
+	border-radius: 11px;
+}
+
+.card-trait > img { // --- CHECK HERE FOR THE IMAGE ---
+  height: 200px;
+  width: 100%;
+	object-fit: cover;
 	background-color: $green;
 }
 
-.container-fluid {
-	margin-top: 42px;
+.card-trait h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.card-body-3 {
-	height: 40px;
+.card-trait p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
 }
 
-.card-body-4 {
-	height: 40px;
+.card-trait .card-trait-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
 }
 
-.card-title {
-	padding-left: 10px;
-	padding-top: 7px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+.card-trait-infos .card-trait-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
 }
 
 .card-link {

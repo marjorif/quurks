@@ -1,3 +1,23 @@
+<div class="traits-container">
+  <div class="container">
+    <div class="container-fluid">
+      <h2>All traits</h2>
+      <div class="row">
+        <% @traits.each do |trait| %>
+          <div class="col col-md-3">
+            <div class="card-trait">
+              <img class="card-img-top-4">
+              <div class="card-trait-infos">
+                <div>
+                  <h2><%= link_to trait.name, trait_path(trait), class: 'card-link' %></h2>
+                </div>
+                <h2 class="card-trait-pricing"><%= trait.price_hour %>€</h2>
+              </div>
+            </div>
+          </div> 
+        <% end %>
+      </div>
+    </div>
 <div class="container">
 
 
@@ -16,9 +36,6 @@
     <% end %>
   </div>
 </div>
-
-
-
 
 <!--<%= link_to "Log Out",  destroy_user_session_path, method: :delete %>
 </div>  -->
