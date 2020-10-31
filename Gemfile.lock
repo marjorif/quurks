@@ -260,10 +260,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-
   cloudinary (~> 1.16.0)
   date_validator
-
   devise
   dotenv-rails
   font-awesome-sass
