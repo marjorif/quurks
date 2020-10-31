@@ -1,22 +1,41 @@
-<div class="container">
-<h2>Log in </h2>
+<div class="container login">
+  <div class="big-container-login">
+    <div class="login-container">
+      <div class="login-header">
+        <h2 class="login-text">Log in</h2>
+      </div>
 
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: false,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
-                  required: false,
-                  input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+                      required: false,
+                      input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+        <div class="form-actions login">
+          <p class="login-btn"><%= f.button :submit, "Log in" %></p>
+        </div>
+      <% end %>
+      <div class="signup-action">
+      <p class="signup-already">No account yet?<span class="signup-link"><%= render "devise/shared/links" %>
+      </div>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+    <div class="login-image">
+      <svg width="725" height="717" viewBox="0 0 725 717" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="201.13" height="145.616" rx="72.808" transform="matrix(0.804714 0.593662 -0.584696 0.811253 269.36 76.1781)" fill="#FFFCFB"/>
+        <rect width="321.083" height="145.616" rx="72.808" transform="matrix(0.804714 0.593662 -0.584696 0.811253 475.104 408.457)" fill="#FFFCFB"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M235.634 500.973C259.145 468.352 304.436 461.259 336.794 485.131L405.623 535.908H222.228C223.555 523.673 227.96 511.621 235.634 500.973Z" fill="#363334"/>
+        <rect width="145.62" height="145.616" rx="72.808" transform="matrix(0.804714 0.593662 -0.584696 0.811253 87.0918 300.901)" fill="#363334"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M466.935 38.5792V219.522L348.654 132.262C316.296 108.391 309.124 62.5943 332.635 29.9733C356.146 -2.64782 401.437 -9.74067 433.795 14.1309L466.935 38.5792Z" fill="#FBCC49"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M353.025 135.643C320.667 111.772 275.376 118.865 251.865 151.486C228.354 184.107 235.526 229.903 267.884 253.775L466.935 400.62V219.678L353.025 135.643Z" fill="#F9B9D3"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8378 156.381C37.3488 123.76 82.6398 116.667 114.998 140.539L466.935 400.173V536H405.78L29.857 258.67C-2.50117 234.799 -9.67323 189.002 13.8378 156.381Z" fill="#5C9468"/>
+      </svg>
     </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+  </div>
 </div>
