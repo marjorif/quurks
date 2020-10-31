@@ -3,16 +3,9 @@
 // --- HOME PAGE ---
 .home {
 	background-color: $offwhite;
-}
-#home-image {
-	position: relative;
-}
-
-#title {
-	font-size: 144px;
-	position: absolute;
-	top: 250px;
-  left: 134px;
+	background-image: url(image-path("homepage.png"));
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .btn.btn-all-traits {
@@ -23,8 +16,8 @@
 	font-weight: bold;
 	color: $black;
 	position: absolute;
-	top: 440px;
-  left: 257px;
+	top: 370px;
+  left: 307px;
 
 	a{
 		color: $white;
