@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Reservation.destroy_all
 Trait.destroy_all
 User.destroy_all
 puts "users destroyed"
@@ -16,7 +17,8 @@ user3 = User.create!(first_name: "Claudine", last_name: "Smith", email: "claudin
 user4 = User.create!(first_name: "Alicia", last_name: "Smith", email: "alicia@dot.com", password: "123456")
 puts "users created"
 
-Trait.destroy_all
+
+
 trait = Trait.create!(name: "Competence", description: "The quality or state of having sufficient knowledge, judgment, skill, or strength (as for a particular duty or in a particular respect)", price_hour: 10, user: user)
 trait1 = Trait.create!(name: "Warmth", description: "A warm person is friendly towards other people, respecting them and caring for them. With such warmth they create a reciprocal liking, trust and bonding. In contrast a cold person has a lot more difficulty in gaining sympathy from others, and perhaps does not care about this.", price_hour: 15, user: user1)
 trait2 = Trait.create!(name: "Outgoing", description: "The adjective outgoing describes someone with a friendly, easy personality. Your outgoing friend might not understand how hard it is for shy people to speak in front of an audience. If you're the only member of your outgoing family who is reserved, you might feel silent and invisible in their sociable midst.", price_hour: 20, user: user2)
@@ -46,4 +48,9 @@ trait4.photo.attach(io: file, filename: 'filename.png', content_type: 'image/png
 
 
 puts "creating reservations"
-reservation = Reservation.create!(user: user, trait: trait, )
+reservation = Reservation.create!(user: user, trait: trait, start_date: Date.today,
+    end_date: Date.tomorrow )
+
+
+
+
