@@ -1,5 +1,5 @@
-<div class="trait_user">
-  <h1><%=current_user.first_name.capitalize%>, your reservations</h1>
+<div class="trait_user_container">
+  <h1><%=current_user.first_name.capitalize%>, your listed traits</h1>
   <div class="rec_yellow"></div>
   <div class="rec_pink"></div>
   <div class="rec_green"></div>
@@ -8,14 +8,14 @@
 </div>
 <div class="cards flex-column justify-content-between">
   <% current_user.traits.each do |trait| %>
-    <div class="card-trait mb-4">
-      <div class="card-trait-infos">
+    <div class="card_user_trait mb-4">
+      <div class="card_user_trait_infos">
         <div>
           <h2><%= trait.name.capitalize  %></h2>
-          <div class="description"><%= trait.description %></div>
+          <div class="trait_description"><%= trait.description %></div>
           <p>Price p/hour<span> <%= trait.price_hour  %><p>
         </div>
-         <div class="d-flex btns">
+         <div class="d-flex trait_btns">
            <div class="back_yellow_btn ml-5">
             <p>
               <%= link_to "Back", profile_user_index_path %>
