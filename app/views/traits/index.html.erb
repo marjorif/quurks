@@ -7,7 +7,7 @@
         <% @traits.each do |trait| %>
           <div class="col col-md-3">
             <div class="card-trait">
-              <img class="card-img-top-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path trait.photo.key, height: 300, width: 400, crop: :thumb %>')">
+              <img class="card-img-top-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path trait.photo.key, height: 200, width: 300, crop: :fill%>')">
               <div class="card-trait-infos">
                 <div>
                   <p class="card-trait-infos-name"><%= link_to trait.name, trait_path(trait), class: 'card-link' %></p>
