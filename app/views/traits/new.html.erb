@@ -1,7 +1,10 @@
-<div class="container col-6 mt-5">
-  <h1>Create a new Trait</h1>
-  <%= render "form", trait: @trait %>
-  <div class="btn">
-    <%= link_to "Cancel", traits_path %>
+<div class="container new-trait">
+  <div class="container new-trait-small"
+  <div class="container col-6 mt-5">
+    <h2 class="create-trait-header">Add a new Trait</h2>
+    <%= render "form", trait: @trait %>
+    <div class="cancel-btn">
+      <%= link_to "Cancel", traits_path %>
+    </div>
   </div>
 </div>
