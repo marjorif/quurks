@@ -1,0 +1,68 @@
+.big-container-login {
+  background-color: $offwhite;
+  width: 80%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 11px;
+  border: 0.1px solid rgb(230, 230, 230);
+  box-shadow: 0 0 15px rgba(139, 139, 139, 0.137);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.login-container {
+  width: 50%;
+  background-color: $offwhite;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 11px;
+}
+
+.login-header {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.login-text {
+  color: $black;
+  font-size: 24px;
+  font-family: $headers-font;
+  justify-self: center;
+}
+
+.login-btn {
+  background-color: $yellow;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(139, 139, 139, 0.137);
+}
+
+.login-btn:hover {
+  background-color: $yellow-hover;
+}
+
+.signup-action {
+  text-align: center;
+  color: $gray;
+  margin-bottom: 60px;
+  margin-top: 38px;
+}
+
+.signup-link a {
+  color: $green;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  color: $pink;
+  text-decoration: none;
+}
+
+.login-image {
+  position: absolute;
+  left: 450px;
+  bottom: -190px;
+}

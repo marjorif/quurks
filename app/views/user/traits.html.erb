@@ -1,15 +1,34 @@
-<div class="user">
-  <h1><%=current_user.first_name.capitalize%>, your listed traits:</h1>
-  <div class="user_info">
-    <% current_user.traits.each do |trait| %>
-     <p>Trait Name: <%= trait.name.capitalize %><p>
-     <p>Description: <%= trait.description %><p>
-     <p>Price p/hour: <%= trait.price_hour %>€<p>
-    <div class="user_action">
-      <%= link_to "Back", profile_user_index_path %>
-      <%= link_to "Edit",  edit_trait_path(trait) %>
-      <%= link_to "Delete", trait_path(trait), method: :delete, data: {confirm: "are you sure?"}%>
+<div class="trait_user">
+  <h1><%=current_user.first_name.capitalize%>, your reservations</h1>
+  <div class="rec_yellow"></div>
+  <div class="rec_pink"></div>
+  <div class="rec_green"></div>
+  <div class="circle_black"></div>
+  <div class="rec_black"></div>
+</div>
+<div class="cards flex-column justify-content-between">
+  <% current_user.traits.each do |trait| %>
+    <div class="card-trait mb-4">
+      <div class="card-trait-infos">
+        <div>
+          <h2><%= trait.name.capitalize  %></h2>
+          <div class="description"><%= trait.description %></div>
+          <p>Price p/hour<span> <%= trait.price_hour  %><p>
+        </div>
+         <div class="d-flex btns">
+           <div class="back_yellow_btn ml-5">
+            <p>
+              <%= link_to "Back", profile_user_index_path %>
+            </p>
+          </div>
+          <div class="edit_green_btn ml-5">
+            <%= link_to "Edit",  edit_trait_path(trait) %>
+          </div>
+          <div class="delete_coral_btn ml-5">
+            <%= link_to "Delete", trait_path(trait), method: :delete, data: {confirm: "are you sure?"}%>
+          </div>
+        </div>
+      </div>
     </div>
-    <% end %>
-  </div>
+  <% end %>
 </div>
