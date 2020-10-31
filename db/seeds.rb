@@ -36,7 +36,7 @@ puts "adding photos"
 file = URI.open('https://res.cloudinary.com/di6k1pdz4/image/upload/v1604144477/competent_vck0ds.jpg')
 trait.photo.attach(io: file, filename: 'filename.png', content_type: 'image/png')
 
-file = URI.open('https://res.cloudinary.com/di6k1pdz4/image/upload/v1604144477/friendly_wgtmls.jpg')
+file = URI.open('https://res.cloudinary.com/di6k1pdz4/image/upload/v1604158843/warmth_llp0zh.jpg')
 trait1.photo.attach(io: file, filename: 'filename.png', content_type: 'image/png')
 
 file = URI.open('https://res.cloudinary.com/di6k1pdz4/image/upload/v1604144477/outgoing_obvpp3.jpg')
