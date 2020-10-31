@@ -9,6 +9,7 @@
 <div class="cards flex-column justify-content-between">
 <% current_user.reservations.each do |reservation| %>
     <div class="card-reservation mb-4">
+      <%= cl_image_tag reservation.trait.photo.key %>
       <div class="card-reservation-infos ">
         <div>
           <h2><%= reservation.trait.name.capitalize  %></h2>
