@@ -4,12 +4,37 @@
   box-shadow: 0px 0px 4px 0.1px rgba(0, 0, 0, 0.15);
   border-radius: 11px;
   text-align: center;
+  background-color: $offwhite;
 
   h1 {
     color: $black;
   }
-
 }
+
+.booking-start-date {
+  text-align: left;
+  color: $gray;
+}
+
+.booking-end-date {
+  text-align: left;
+  color: $gray;
+}
+
+.booking-button {
+  padding-top: 10px;
+}
+
+
+.booking-cancel {
+  padding-top: 20px;
+}
+
+.reservation-title {
+  padding-bottom: 15px;
+  color: $gray;
+}
+
 
 .new-reservation-btn{
   width: 355px;
@@ -19,11 +44,11 @@
   background: #F9CF59;
   mix-blend-mode: normal;
   border-radius: 5px;
+  box-shadow: 0 0 15px rgba(139, 139, 139, 0.137);
 }
 
 
-
 .cancel-new-reservation {
-  color: $yellow;
+  color: $gray;
 }
 

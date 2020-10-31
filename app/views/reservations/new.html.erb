@@ -1,12 +1,24 @@
-<div class="container col-3 mt-5">
+<div class="container col-4 mt-5">
   <div class="reservation-card">
-    <h1>Your reservation</h1>
+    <div class="reservation-title">
+      <h1>Book Trait</h1>
+    </div>
     <%= simple_form_for [@trait, @reservation] do |f| %>
-    <%= f.input :start_date, as: :date, html5: true %>
-    <%= f.input :end_date, as: :date, html5: true %>
-    <%= f.button :submit, class: 'new-reservation-btn' %>
+    <div class="booking-inputs">
+      <div class="booking-start-date">
+        <%= f.input :start_date, as: :date, html5: true %>
+      </div>
+      <div class="booking-end-date">
+      <%= f.input :end_date, as: :date, html5: true %>
+      </div>
+    </div>
+    <div class="booking-button">
+      <%= f.button :submit, class: 'new-reservation-btn', value: "Confirm Booking" %>
+    </div>
     <%end %>
-    <%= link_to "cancel", traits_path, class: 'cancel-new-reservation' %>
+    <div class="booking-cancel">
+      <%= link_to "Cancel", traits_path, class: 'cancel-new-reservation' %>
+    </div>
 
 <!--     <div class="reservations_list">
     <div class="rec_yellow"></div>

@@ -1,4 +1,4 @@
-.big-container {
+.big-container-login {
   background-color: $offwhite;
   width: 80%;
   display: flex;
@@ -11,7 +11,7 @@
   overflow: hidden;
   margin-bottom: 40px;
 }
-.signup-container {
+.login-container {
   width: 50%;
   background-color: $offwhite;
   padding-left: 50px;
@@ -19,35 +19,20 @@
   border-radius: 11px;
 }
 
-.signup-header {
+.login-header {
   text-align: center;
   padding-top: 60px;
   padding-bottom: 40px;
 }
 
-.signup-text {
+.login-text {
   color: $black;
   font-size: 24px;
   font-family: $headers-font;
   justify-self: center;
 }
 
-.signup-name {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.signup-first-name {
-  margin-right: 10px;
-}
-
-.signup-last-name {
-  margin-left: 10px;
-}
-
-.signup-btn {
+.login-btn {
   background-color: $yellow;
   border-radius: 4px;
   text-align: center;
@@ -55,28 +40,28 @@
   box-shadow: 0 0 15px rgba(139, 139, 139, 0.137);
 }
 
-.signup-btn:hover {
+.login-btn:hover {
   background-color: $yellow-hover;
 }
 
-.login-action {
+.signup-action {
   text-align: center;
   color: $gray;
   margin-bottom: 60px;
   margin-top: 38px;
 }
 
-.login-link a {
+.signup-link a {
   color: $green;
   font-weight: 500;
 }
 
-.login-link a:hover {
+.signup-link a:hover {
   color: $pink;
   text-decoration: none;
 }
 
-.signup-image {
+.login-image {
   position: absolute;
   left: 450px;
   bottom: -190px;
