@@ -36,19 +36,32 @@
 }
 
 
-.new-reservation-btn{
-  width: 355px;
-  height: 49px;
-  left: 307px;
-  top: 515px;
-  background: #F9CF59;
-  mix-blend-mode: normal;
+.btn.btn-new-booking{
+  background-color: $yellow;
   border-radius: 5px;
+  font-size: 18px;
+  width: 70%;
+  height: 50%;
+  font-family: 'Roboto', sans-serif;
+  color: $white;
+  font-weight: bold;
   box-shadow: 0 0 15px rgba(139, 139, 139, 0.137);
 }
 
+.btn.btn-new-booking:hover {
+  background-color: $yellow-hover;
+}
+
+a {
+    text-decoration: none !important;
+  }
+
 
 .cancel-new-reservation {
+  color: $gray;
+}
+
+.cancel-new-reservation:hover {
   color: $gray;
 }
 
