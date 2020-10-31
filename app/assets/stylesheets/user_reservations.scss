@@ -13,7 +13,6 @@
 
 .cards{
   margin-top:-420px;
-  margin-left:200px;
   justify-content:space-between;
 }
 
@@ -25,7 +24,9 @@
   box-shadow: 0 0 7px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  width:500px;
+  width:560px;
+  border-radius:10px;
+  margin-left:30px;
 }
 
 .card-reservation img {
@@ -61,7 +62,7 @@
 
 .reservation_btns{
   position:absolute;
-  margin-left:120px;
+  margin-left:20px;
   bottom:8px;
 }
 

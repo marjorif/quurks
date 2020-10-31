@@ -1,4 +1,4 @@
-<div class="trait_user_container">
+  <div class="trait_user_container">
   <h1><%=current_user.first_name.capitalize%>, your listed traits</h1>
   <div class="rec_yellow"></div>
   <div class="rec_pink"></div>
@@ -9,6 +9,7 @@
 <div class="cards flex-column justify-content-between">
   <% current_user.traits.each do |trait| %>
     <div class="card_user_trait mb-4">
+      <%= cl_image_tag trait.photo.key%>
       <div class="card_user_trait_infos">
         <div>
           <h2><%= trait.name.capitalize  %></h2>
