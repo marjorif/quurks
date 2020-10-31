@@ -59,6 +59,13 @@ before_action :find_reservation, only: [:show, :edit, :update, :destroy]
   # def find_trait
   #    @trait = Trait.find(params[:trait_id])
   # end
+  def end_date_is_after_start_date
+    return if end_date.blank? || start_date.blank?
+
+    if end_date < start_date
+      errors.add(:end_date, "cannot be before the start date")
+    end
+  end
 
   def find_reservation
     @reservation = Reservation.find(params[:id])

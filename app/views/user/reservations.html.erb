@@ -1,8 +1,15 @@
 <div class="reservation_user">
   <h1><%=current_user.first_name.capitalize%>, your reservations</h1>
-  <% current_user.reservations.each do |reservation| %>
-    <div class="card-reservation">
-      <div class="card-reservation-infos">
+  <div class="rec_yellow"></div>
+  <div class="rec_pink"></div>
+  <div class="rec_green"></div>
+  <div class="circle_black"></div>
+  <div class="rec_black"></div>
+</div>
+<div class="cards flex-column justify-content-between">
+<% current_user.reservations.each do |reservation| %>
+    <div class="card-reservation mb-4">
+      <div class="card-reservation-infos ">
         <div>
           <h2><%= reservation.trait.name.capitalize  %></h2>
           <p><%= reservation.trait.description %></p>
@@ -16,18 +23,13 @@
             </p>
           </div>
           <div class="edit_green_btn ml-5">
-            <%= link_to "Edit",  edit_trait_reservation_path(reservation.trait, reservation) %>
+            <p><%= link_to "Edit",  edit_trait_reservation_path(reservation.trait, reservation) %></p>
           </div>
           <div class="delete_coral_btn ml-5">
-            <%= link_to "Delete", reservation_path(reservation), method: :delete, data: {confirm: "are you sure?"}%>
+            <p><%= link_to "Delete", reservation_path(reservation), method: :delete, data: {confirm: "are you sure?"}%></p>
           </div>
         </div>
       </div>
     </div>
   <% end %>
-    <div class="rec_yellow"></div>
-    <div class="rec_pink"></div>
-    <div class="rec_green"></div>
-    <div class="circle_black"></div>
-    <div class="rec_black"></div>
-</div
+</div>
