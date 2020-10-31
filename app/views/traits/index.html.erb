@@ -10,9 +10,9 @@
               <img class="card-img-top-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path trait.photo.key, height: 300, width: 400, crop: :thumb %>')">
               <div class="card-trait-infos">
                 <div>
-                  <h2 class="card-trait-infos-name"><%= link_to trait.name, trait_path(trait), class: 'card-link' %></h2>
+                  <p class="card-trait-infos-name"><%= link_to trait.name, trait_path(trait), class: 'card-link' %></p>
                 </div>
-                <h2 class="card-trait-infos-pricing"><%= trait.price_hour %>€</h2>
+                <p class="card-trait-infos-pricing"><%= trait.price_hour %>€</p>
               </div>
             </div>
           </div>
