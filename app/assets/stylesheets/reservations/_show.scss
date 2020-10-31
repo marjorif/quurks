@@ -1,0 +1,31 @@
+.new-booking-done {
+  padding: 60px;
+  border: 0.4px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 4px 0.1px rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  text-align: center;
+  background-color: $offwhite;
+
+}
+
+
+.cta-traits {
+  padding-top: 20px;
+
+  a {
+  color: $yellow !important;
+  text-decoration: none !important;
+  text-size: 10px;
+
+  }
+}
+
+.confirmation-container {
+
+}
+
+.booking-confirmation-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
