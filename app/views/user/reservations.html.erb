@@ -13,10 +13,12 @@
         <div>
           <h2><%= reservation.trait.name.capitalize  %></h2>
           <p><%= reservation.trait.description %></p>
-          <p>From:<span> <%= reservation.start_date  %><p>
-          <p>To:<span> <%= reservation.end_date  %><p>
+          <div class="d-flex justify-content-end">
+            <p>From:<span class="mr-4"> <%= reservation.start_date  %><p>
+            <p>To:<span> <%= reservation.end_date  %><p>
+          </div>
         </div>
-         <div class="d-flex">
+         <div class="d-flex reservation_btns">
            <div class="back_yellow_btn ml-5">
             <p>
               <%= link_to "Back", profile_user_index_path %>
