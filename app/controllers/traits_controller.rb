@@ -47,7 +47,7 @@ class TraitsController < ApplicationController
   end
 
   def trait_params
-    params.require(:trait).permit(:name, :description, :price_hour)
+    params.require(:trait).permit(:name, :description, :price_hour, :photo)
   end
 end
 
