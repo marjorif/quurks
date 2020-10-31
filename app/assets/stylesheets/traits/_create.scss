@@ -41,3 +41,8 @@
 .cancel-btn a {
   color: $black;
 }
+
+.cancel-btn a:hover {
+  color: $pink;
+  text-decoration: none;
+}
