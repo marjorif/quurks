@@ -1,0 +1,43 @@
+.container.new-trait {
+  background-color: $offwhite;
+  width: 50%;
+  border-radius: 11px;
+  border: 0.1px solid rgb(230, 230, 230);
+  box-shadow: 0 0 15px rgba(139, 139, 139, 0.137);
+  margin-bottom: 40px;
+}
+
+.container.new-trait-small {
+  width: 80%;
+}
+
+.create-trait-header {
+  color: $black;
+  font-size: 24px;
+  font-family: $headers-font;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.create-btn {
+  background-color: $yellow;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(139, 139, 139, 0.137);
+  font-weight: 900;
+}
+
+.create-btn:hover {
+  background-color: $yellow-hover;
+}
+
+.cancel-btn {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.cancel-btn a {
+  color: $black;
+}

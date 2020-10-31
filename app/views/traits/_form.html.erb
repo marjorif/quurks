@@ -1,8 +1,8 @@
 <%= simple_form_for @trait do |f|%>
-  <%= f.input :name %>
+  <%= f.input :name, label: false, placeholder: 'Name *' %>
   <!-- go to schema and change description to a text input instead of string -->
-  <%= f.input :description %>
-  <%= f.input :price_hour %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
+  <%= f.input :description, label: false, placeholder: 'Description *' %>
+  <%= f.input :price_hour, label: false, placeholder: 'Price per hour *' %>
+  <div class="photo-uploader"><%= f.input :photo, as: :file %></div>
+  <div class="create-btn"><%= f.button :submit, "Add" %></div>
 <% end %>
