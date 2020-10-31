@@ -18,8 +18,9 @@
 }
 
 .card-reservation {
+  position:relative;
   overflow: hidden;
-  height: 150px;
+  height: 170px;
   background: white;
   box-shadow: 0 0 7px rgba(0,0,0,0.2);
   display: flex;
@@ -36,11 +37,11 @@
 .card-reservation h2 {
   font-size: 16px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: -50px;
 }
 
 .card-reservation p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1;
   opacity: .7;
   margin-bottom: 0;
@@ -49,13 +50,26 @@
 
 .card-reservation .card-reservation-infos {
   padding: 16px;
+
+  .description{
+    font-size:13px;
+    width:400px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+.reservation_btns{
+  position:absolute;
+  margin-left:120px;
+  bottom:8px;
 }
 
 .back_yellow_btn{
   border: 2px solid #F9CF59;
   width: 70px;
   height: 29px;
-  margin-top:10px;
+  // margin-top:10px;
   border-radius: 5px;
   text-align:center;
 }
