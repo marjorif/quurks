@@ -11,6 +11,7 @@
     <!-- added font-awesome, bootstrap, google fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
@@ -24,7 +25,7 @@
           <!-- shows quurks in navbar when not on the home page -->
           <% if !current_page?(root_path) %>
             <li class="nav-item">
-              <%= link_to "Quurks", root_path, class: "nav-link home" %>
+              <%= link_to "Quurks", root_path, class: "nav-link homelink" %>
             </li>
             <% end %>
           <!-- for the rest of the navbar -->
